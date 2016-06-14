@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    color: black;
+    padding: 5px;
+}
+th {
+
+	background-color:lightgrey;
+    text-align:left;
+}
+td{
+  height: 30px;
+  padding:5px;
+}
+#header {
+    background-color:#3D3935;
+    padding:7px;
+}
+#left {
+    line-height:45px;
+    background-color:#A7192F;
+    height:700px;
+    width:50px;
+    float:left;
+    padding:5px;
+}
+#right{
+    line-height:45px;
+    background-color:#A7192F;
+    height:700px;
+    width:50px;
+    float:right;
+    padding:5px;
+}
+#GC{
+
+    margin-top:40px  ;
+    margin-left:90px;
+    padding:2px;
+}
+#section2 {
+    width:80%;
+    height:50%;
+    background-color:#E9EEF1;
+    float:left;
+    margin:25px 30px 0 ;
+    padding:10px;
+}
+#footerb {
+    width:97.7%;
+    background-color:#3D3935;
+    padding:20px;
+    clear:both;
+}
+#footerR {
+    width:97.7%;
+    background-color:#A7192F;
+    padding:20px;
+    clear:both;
+}
+
+</style>
+<script>
+function myFunction() {
+/*
+var a1Per = parseFloat(document.getElementById("a1Per").value);
+var a1Gra = parseFloat(document.getElementById("a1Gra").value);
+var a1GraTotal = parseFloat(document.getElementById("a1GraTotal").value);
+
+var a2Per = parseFloat(document.getElementById("a2Per").value);
+var a2Gra = parseFloat(document.getElementById("a2Gra").value);
+var a2GraTotal = parseFloat(document.getElementById("a2GraTotal").value);
+
+var a3Per = parseFloat(document.getElementById("a3Per").value);
+var a3Gra = parseFloat(document.getElementById("a3Gra").value);
+var a3GraTotal = parseFloat(document.getElementById("a3GraTotal").value);
+
+  if (isNaN(a1Per) || isNaN(a2Per) || isNaN(a3Per)) {
+       alert("Input not valid");
+    } else {	
+		var total = a1Per/100 *(a1Gra/a1GraTotal) + a2Per/100 *(a2Gra/a2GraTotal) + a3Per/100 *(a3Gra/a3GraTotal) 
+		//alert(total)
+		var meanGra = (a1Gra + a2Gra + a3Gra)/3
+		document.getElementById("result").innerHTML = "Weighted Grade is: " + total.toFixed(2);
+		//document.getElementById("result").innerHTML += "<br>Mean Grade is: " + meanGra.toFixed(2);
+
+    }
+	*/
+//another 
+var x = document.getElementsByTagName("input");
+//alert (x.length)
+var i;
+var test=0;
+for (i = 0; i < x.length; ) {
+//alert (x[i].value==="")
+  if (!((x[i].value==="") ||(x[i+1].value==="") || (x[i+2].value===""))) {
+		if (!(isNaN(x[i].value) || isNaN(x[i+1].value) || isNaN(x[i+2].value))) {
+			test += parseFloat(x[i].value/100) * parseFloat(x[i+1].value)/parseFloat(x[i+2].value)
+		}
+	}
+  else  {
+	    //alert("Input not valid");
+    }
+   i=i+3
+}
+//alert(test.toFixed(2))
+		
+document.getElementById("result").innerHTML = "Weighted Grade is: " + test.toFixed(2)* 100;
+
+	
+
+}
+</script>
+
+
+
+
+</head>
+<body>
+<div id="left">
+</div>
+
+
+<div id="right">
+</div>
+
+<div id="header">
+</div>
+
+
+
+
+<div id="GC">
+<p style="font-family:Verdana;font-size:170%;"> Grade Calculator </p>
+</div>
+
+
+<div id="nav3">
+</div>
+
+
+<div id="section2">
+<p style="color:#B51A23; font-family:verdana;"><b>Activities</b><br>
+<p style="font-size:80%; font-family:verdana;">Give grades to the numeric activities:</p>
+<br>
+<table style="width:100%; height:30%;">
+ <tr>
+    <td>Activity 1</td>
+    <td>A1</td>
+    <td>
+     <input id="a1Per" type="text" name="per" size="8" style="height:25px;" value="12"> </input>
+    </td>
+    <td>
+    <input id="a1Gra" type="text" name="per" size="8" style="height:25px;"  value="85"> </input> / 
+    <input id="a1GraTotal" type="text" name="per" size="8" style="height:25px;"  value="100">  </input>
+   </tr>
+  <tr>
+    <td>Activity2</td>
+    <td>A2</td>
+    <td>
+     <input id="a2Per" type="text" name="per" size="8" style="height:25px;" value="38"> </input>
+    </td>
+    <td>
+    <input id="a2Gra" type="text" name="per" size="8" style="height:25px;"  value="80"> </input> / 
+    <input id="a2GraTotal" type="text" name="per" size="8" style="height:25px;"  value="100">  </input>
+   </tr> 
+<tr>
+    <td>Activity3</td>
+    <td>A3</td>
+    <td>
+     <input id="a3Per" type="text" name="per" size="8" style="height:25px;"  value="50"> </input>
+    </td>
+    <td>
+    <input id="a3Gra" type="text" name="per" size="8" style="height:25px;"   value="75"> </input> / 
+    <input id="a3GraTotal" type="text" name="per" size="8" style="height:25px;"  value="100" >  </input>
+   </tr> 
+
+
+    <tr>
+    <td>Activity 4</td>
+    <td>A4</td>
+    <td>
+       <form>
+          <input type="text" name="per" size="8" height="30" style="height:25px;">
+       </form>
+    </td>
+    <td>
+       <form>
+            <input type="text" name="per" size="8" style="height:25px;"> / <input type="text" name="per" size="8" style="height:25px;">
+       </form>
+  </tr>
+</table>
+
+<div style="color:#B51A23; font-family:verdana;" ><br><b>Result</b><br><br>
+<span id="result"> </span>
+<div>
+ <p><button onclick="myFunction()" 
+	style=" border-color:#CE5046;border-radius:5px;background-color:#A7192F;color:white;height:30px;width:90px;margin-left:75%">WEIGHTED</button>
+<button onclick="myFunction()" 
+	style=" border-color:#CE5046;border-radius:5px;background-color:#A7192F;color:white;height:30px;width:90px;">MEAN</button>
+ </p>
+</div>
+</div>
+</div>
+<div id="footerb">
+</div>
+
+
+</body>
+</html>
