@@ -20,7 +20,6 @@ Rails.application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  # zqian
   config.serve_static_assets = false
 
   # Compress JavaScripts and CSS.
@@ -28,7 +27,6 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  # zqian
   config.assets.compile = false
 
   # Generate digests for assets URLs.

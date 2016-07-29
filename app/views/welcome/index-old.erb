@@ -8,6 +8,9 @@
 <%= Cowsay.say("Hello") %>
 </pre>
 
+<%= image_tag("test.png", size: "400x600", alt: "test static assets") %>
+
+
 <% for i in 0..(ENV['TIMES'] ? ENV['TIMES'].to_i : 2) do %>
   <p>Hello World #<%= i %>!</p>
 <% end %>
