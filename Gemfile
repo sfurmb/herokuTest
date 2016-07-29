@@ -1,10 +1,6 @@
 source 'https://rubygems.org'
 
 
-# zqian
-gem 'rails_12factor', group: :production
-
-
 ruby '2.2.2', :engine => 'jruby', :engine_version => '9.0.0.0'
 gem 'cowsay'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
